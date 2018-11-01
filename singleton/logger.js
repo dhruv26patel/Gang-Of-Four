@@ -4,10 +4,6 @@ class Logger {
         this.logs = [];
     }
 
-    get count() {
-        return this.logs.length;
-    }
-
     log(message) {
         const timestamp = new Date().toISOString();
         this.logs.push({ message, timestamp });
@@ -27,6 +23,7 @@ class Singleton {
     getInstance() {
         return Singleton.instance;
     }
+
 }
 
-module.exports = Logger;
+module.exports = Singleton;

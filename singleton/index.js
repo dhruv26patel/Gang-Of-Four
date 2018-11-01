@@ -1,24 +1,24 @@
 var Logger = require('./Logger');
-var Shopper = require('./Shopper');
-var Store = require('./Store');
+var Person = require('./Person');
 
 var logger = new Logger().getInstance();
 
 logger.log('starting app...');
 
-var alex = new Shopper('alex', 500)
-var ski_shop = new Store('Steep and Deep Supplies', [
+var person = [
     {
-        item: 'Downhill Skis',
-        qty: 5,
-        price: 750
+        name:'Dhruv', 
+        age: 23
+    }, 
+    {
+        name: 'Dhaval',
+        age: 22
     },
     {
-        item: 'Knit Hat',
-        qty: 20,
-        price: 5
+        name: 'Shlok',
+        age: 18
     }
-])
+]
 
 logger.log('finished config...');
 
