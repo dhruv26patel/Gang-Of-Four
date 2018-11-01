@@ -1,26 +1,12 @@
 var Logger = require('./Logger');
 var Person = require('./Person');
+var Pets = require('./Pets');
 
 var logger = new Logger().getInstance();
 
-logger.log('starting app...');
+var dhruv = new Person('Dhruv', 24);
+var dhaval = new Person('Dhaval', 22);
+var shlok = new Person('Shlok', 18);
+var ash = new Pets('Ash', 5);
 
-var person = [
-    {
-        name:'Dhruv', 
-        age: 23
-    }, 
-    {
-        name: 'Dhaval',
-        age: 22
-    },
-    {
-        name: 'Shlok',
-        age: 18
-    }
-]
-
-logger.log('finished config...');
-
-console.log(`${logger.count} logs total`);
-logger.logs.map(log => console.log(`   ${log.message}`));
+logger.logs.map(log => console.log(`    ${log.message}`));
